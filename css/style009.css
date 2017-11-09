@@ -1,0 +1,33 @@
+
+
+#container {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+    grid-auto-rows: 30px 50px;
+}
+
+.itemA {
+    background: #ff2424;
+}
+.itemB {
+    background: #ffe924;
+}
+.itemC {
+    background: #24ff6d;
+}
+.itemD {
+    background: #24d3ff;
+}
+.itemE {
+    background: #7824ff;
+}
+.itemF {
+    background: #f824ff;
+}
+
+.itemH {
+    grid-row: 4; grid-column: 2;
+}
+
+

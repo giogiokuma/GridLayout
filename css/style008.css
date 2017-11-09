@@ -1,0 +1,31 @@
+
+
+#container {
+    vertical-align: middle;
+    display:grid;
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-rows: 100px 50px;
+    text-align: center;
+}
+.itemA {
+    background: #ff2424;
+}
+.itemB {
+    background: #ffe924;
+}
+.itemC {
+    background: #24ff6d;
+}
+.itemD {
+    background: #24d3ff;
+}
+.itemE {
+    background: #7824ff;
+}
+.itemF {
+    background: #f824ff;
+}
+
+
+
+
