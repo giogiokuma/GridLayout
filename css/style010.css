@@ -8,38 +8,37 @@ body {
     margin:40px;
     font-family: 
 }
-h1 {
+h1, p {
     font-family: 'Rounded Mplus 1c';
     font-weight:400;
 }
-#container {
-    display: grid;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: 100px 100px 100px;
-    grid-auto-rows: 30px 50px;
+/* make a grid */
+.wrapper {
+    max-width:940px;
+    margin:0  auto; 
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap:10px;
 }
 
-.itemA {
-    background: #ff2424;
+.wrapper > * {
+    background-color: #444;
+    color:#fff;
+    border-radius:5px; 
+    padding:20px;
+    font-size:150%;
+    margin-bottom:10px;
 }
-.itemB {
-    background: #ffe924;
-}
-.itemC {
-    background: #24ff6d;
-}
-.itemD {
-    background: #24d3ff;
-}
-.itemE {
-    background: #7824ff;
-}
-.itemF {
-    background: #f824ff;
+.header, .footer {
+    grid-column:1/-1;
+    clear:both;
 }
 
-.itemH {
-    grid-row: 4; grid-column: 2;
-}
-
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+    .wrapper > * {
+      width: auto;
+      margin: 0;
+    }
+  }
 
