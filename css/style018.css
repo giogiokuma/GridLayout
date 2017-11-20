@@ -1,0 +1,53 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css)
+*,*:before,*:after {
+  box-sizing:border-box;
+}
+body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    margin:40px; 
+    color:#444;
+}
+img {
+  max-width: 100%;
+}
+h1, p {
+    font-family: 'Rounded Mplus 1c';
+    font-weight:400;
+    background-color: #fff;
+    color:#444;
+}
+
+.wrapper {
+  overflow: hidden;
+  margin-left:-10px;
+}
+
+.column {
+  float: left; 
+  box-sizing: border-box; 
+  width: 33.333%;
+  padding-left: 10px; 
+}
+.column .item{
+  margin-top: 10px; 
+}
+
+.column .items:first-child {
+  margin-top: 0; 
+}
+
+.column:nth-child(1) .item{
+  height: 290px;
+  background:khaki;
+}
+
+.column:nth-child(2) .item {
+  height: 140px; 
+  background: mediumspringgreen;
+}
+.column:nth-child(3) .item {
+  height: 90px; 
+  background:steelblue; 
+}
