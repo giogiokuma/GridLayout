@@ -4,10 +4,45 @@
 *,*:before,*:after {
   box-sizing:border-box;
 }
+
+body {
+  margin: 20px;
+  font: normal 16px/1.4 sans-serif;
+  background: floralwhite;
+  color: #222;
+}
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  border: 10px solid coral;
+}
+
+.item:nth-child(1) {
+  background: khaki;
+  grid-row: span 6;
+}
+
+.item:nth-child(n+2):nth-child(-n+3) {
+  background: mediumspringgreen;
+  grid-row: span 3;
+}
+
+.item:nth-child(n+4) {
+  background: steelblue;
+  grid-row: span 2;
+}
+
+/* ここから  いままでの Layout */
+/*
 body {
     font-family: 'Noto Sans Japanese', sans-serif;
-    margin:40px; 
-    color:#444;
+    margin:20px; 
+    background: floralwhite;
+    color:#222;
 }
 img {
   max-width: 100%;
@@ -19,55 +54,42 @@ h1, p {
     color:#444;
 }
 
+.container {
+  border: 10px solid coral;
+}
 
-/* grid no support */
 .wrapper {
-  display: flex;
-  flex-wrap: wrap; 
-}
-.wrapper {
-  display: grid; 
-  margin:0 auto; 
+  overflow: hidden; 
+  margin-left: -10px;
 }
 
-/* make a grid */
-.wrapper {
-  max-width: 940px; 
-  margin: 0 20px; 
-  grid-gap: 10px;
+.column {
+  float: left; 
+  box-sizing: border-box;
+  width: 33.33%; 
+  padding-left: 10px;
 }
 
-
-/* for grid layout */
-.header,
-.footer {
-  margin-left: 5px; 
-  margin-right: 5px; 
-  flex: 0 1 100%; 
-  grid-column: 1 / -1; 
+.column .item {
+  margin-top: 10px; 
+}
+.column .item: first-child {
+  margin-top: 0; 
 }
 
-.wrapper > * {
-  background-color: #fff;
-  color: #444; 
-  border-radius: 5px; 
-  border:1px solid #000000;
-  padding:20px;
-  font-size:150%; 
-  margin-bottom: 10px;
+.column:nth-child(1) .item {
+  height: 290px; 
+  background: khaki; 
+}
+.column:nth-child(2) .item {
+  height: 140px;
+  background: mediumspringgeen;
 }
 
-#warning {
-  display:grid;
-  background:#fcc; 
-  padding:0.5em; 
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(7, 1fr);
-
- }
-/* flex items to 0 as we have gaps in grid */
-@supports(display: grid) {
-  .wrapper > * {
-    margin:0; 
-  }
+.column:nth-child(3) .item {
+  height: 90px; 
+  background: steelblue; 
 }
+
+*/
+

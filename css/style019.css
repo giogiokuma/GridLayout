@@ -1,0 +1,48 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css)
+*,*:before,*:after {
+  box-sizing:border-box;
+}
+body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    margin:40px; 
+    color:#444;
+}
+img {
+  max-width: 100%;
+}
+h1, p {
+    font-family: 'Rounded Mplus 1c';
+    font-weight:400;
+    background-color: #fff;
+    color:#444;
+}
+
+.Grid {
+  /* create a grid container */
+  display: grid;
+
+  /* gutters between grid items */
+  grid-gap: 20px;
+
+  /* define 12 equally sized columns, 1fr = 1 fraction */
+  grid-template-columns: repeat(12, 1fr);
+  
+}
+
+.Story:nth-of-type(1) {
+  grid-column: span 4;
+}
+
+.Story:nth-of-type(2) {
+  grid-column: span 5;
+}
+
+
+
+.FastNews {
+  /* <start> / <end> */
+  grid-row: 1 / 2;
+  grid-column: 10 / 13;
+}
