@@ -30,6 +30,65 @@ h1, p {
   grid-template-columns: repeat(12, 1fr);
   
 }
+/* Step 1
+12 コラムグリッド　を作成　 */
+
+.Grid {
+  /* create a grid container */
+  display: grid; 
+  grid-gap:20px;
+  grid-template-columns: repeat(12, 1fr); 
+}
+/* Step  2
+1番目の行で　何コラム使用するかを宣言 => 最初の2ストーリー
+*/
+.Story:nth-of-type(1) {
+  grid-column: span 4; 
+  border:1px solid red;
+}
+.Story:nth-of-type(2) {
+  grid-column: span 5; 
+  border: 1px solid blue;
+}
+
+/* Step 3
+Grid area を定義
+*/
+
+.FastNews {
+  /* <start> / <end> */
+  grid-row: 1 / 2; 
+  grid-column: 10 / 13; 
+  border: 1px solid green; 
+}
+
+/* Step 4 */
+/*
+5 ストーリーの span を定義
+FastFT sub-section を設定
+*/
+.Story:nth-of-type(n+3):nth-of-type(-n+6) {
+  grid-column:span 3; 
+  border:1px solid orange;
+}
+.Story:nth-of-type(7) {
+  grid-column:span 6; 
+  border:1px solid yellowgreen;
+}
+
+
+.Story:nth-of-type(7) {
+
+}
+
+
+
+
+
+
+
+
+
 
 .Story:nth-of-type(1) {
   grid-column: span 4;
