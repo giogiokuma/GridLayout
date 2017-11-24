@@ -1,0 +1,81 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css)
+*,*:before,*:after {
+  box-sizing:border-box;
+}
+body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    margin:40px; 
+    color:#444;
+}
+
+.container {
+  color:#ecf0f1;
+  font-size:2.0rem; 
+}
+
+.container > * {
+  padding:10px; 
+}
+
+.header {
+  background-color:#2ecc71;
+}
+
+.main {
+  background-color:#3498db;
+  height: 300px; 
+}
+
+.aside {
+  background-color: #f1c40f;
+}
+
+.nav {
+  background-color:#e74c3c;
+}
+
+.footer {
+  background-color: #9b59b6; 
+}
+
+/* グリッドコンテナ */
+.container {
+  display: grid;
+  /*  */
+  grid-template-columns: 180px 1fr 160px; 
+  grid-template-rows: 60px 1fr 90px; 
+} 
+
+/* グリッドアイテム */
+.header {
+  /* 列の1本目から4本目まで */
+  grid-column: 1 / 4; 
+  /* 行の1本目から2本目のグリッドラインまで */
+  grid-row: 1;
+}
+.main {
+  /* 列の2本目から3本目のグリッドラインまで */
+  grid-column:2 / 3;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 2;
+}
+.aside {
+  /* 列2本目から3本目のグリッドラインまで */
+  grid-column:1 / 2; 
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row:2;
+}
+
+.nav {
+  /* 列の3本目から4本目のグリッドラインまで */
+  grid-column: 3 / 4; 
+  grid-row: 2; 
+}
+.footer {
+  /* 列の一本目から4本目のグリッドラインまで */
+  grid-column: 1 / 4;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 3;
+}
